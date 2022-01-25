@@ -1,0 +1,87 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	font-family: "Quicksand", sans-serif;
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.text-muted {
+	color: $gray-black;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+.flex {
+	display: flex;
+	overflow-y: hidden;
+	.navbar {
+		flex-basis: 10%;
+		max-width: 5rem;
+	}
+	.flex-right{
+		background-color: $white-bg;
+		flex-grow: 1;
+		position: relative;
+		height: 100vh;
+		max-height: 100vh;
+	}
+	.scroll {
+		overflow-y: scroll;
+	}
+}
+.orange-bg {
+	background-color: $orange;
+}
+.no-list{
+	list-style: none;
+	padding: 0;
+}
+.floating-number {
+	position: absolute;
+	top: -.2rem;
+	right: -.5rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: .2rem;
+	background-color: $red;
+}
+.orange{color: $orange}
+
+.rd-input {
+	padding: 1rem 0 1rem 3rem;
+	border: none;
+	border-radius: 12px;
+	box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
+	color: $gray;
+	&:focus{
+		outline: none;
+	}
+}
+.btn {
+	cursor: pointer ;
+	border-radius: 12px;
+	border: none;
+	background-color: #fff;
+	padding: .5rem 1.5rem;
+}
+.btn-danger {
+	background-color: $red;
+	color: #fff;
+}
+.btn-success {
+	background-color: $blue;
+	color: #fff;
+}
+.btn-orange {
+	background-color: $orange;
+	color:#fff;
+}
+.btn-transparent {
+	background: transparent;
+}
+.text-muted{
+	color: #ccc;
+}

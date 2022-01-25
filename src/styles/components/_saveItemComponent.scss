@@ -1,0 +1,43 @@
+.form {
+	background-color: #fff;
+	position: absolute;
+	height: 8.4rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+.form__input-container{
+	flex-basis: 100%;
+	border-radius: 12px;
+	border: 2px solid $orange;
+	overflow: hidden;
+	display: flex;
+	.form__input{
+		border:none;
+		padding: .8rem .5rem;
+		flex-basis: 55%;
+		&:focus{
+			outline: none;
+		}
+	}
+	.form__button {
+		border: none;
+		background-color: $orange;
+		border-radius: 8px;
+		color: #fff;
+		flex-basis: 45%;
+	}
+	input[disabled]{
+		background-color: #ccc;
+	}
+}
+.form__input-container.disabled {
+	border: 2px solid #ccc;
+}
+.form__buttons {
+	display: flex;
+}

@@ -1,0 +1,44 @@
+.history {
+	padding: 1rem;
+	position: relative;
+}
+.history__header {
+	margin-bottom: 1rem;
+}
+
+.history__month {
+	margin-bottom: 1rem;
+}
+
+.history-item {
+	margin-bottom: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 0 4px #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	span {margin-bottom: .7rem;}
+}
+.history-item__date {
+	font-size: .75rem;
+}
+.history-item__status {
+	border: 2px solid $blue;
+	border-radius: 12px;
+	font-size: .75rem;
+	padding: .5rem;
+}
+.history__list {
+	display: flex;
+}
+.history__list-item {
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 0 5px #ccc;
+	padding: 1rem;
+}

@@ -1,0 +1,43 @@
+.add-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+	padding: 1rem 2rem;
+	overflow-y: auto;
+}
+
+.add-item__form-field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1.2rem;
+	label{margin-bottom: 1rem;}
+}
+.add-item__form-input, .add-item__form-textarea {
+	border-radius: 12px;
+	border: 2px solid $gray;
+	padding: 1.2rem .5rem;
+}
+.add-item__form-textarea{
+	height: 6.9rem;
+}
+
+.add-item__form-category-results {
+	height: 6.5rem;
+	background-color: #fff;
+	border: 2px solid $gray;
+	border-radius: 12px;
+	margin-top: .5rem;
+	overflow-y: auto;
+	padding: .3rem;
+}
+.add-item__form-category{
+	display: block;
+	padding: .5rem;
+	border-radius: 12px;
+	&:hover{
+		background-color: rgba($color: $gray, $alpha: .2);
+	}
+}

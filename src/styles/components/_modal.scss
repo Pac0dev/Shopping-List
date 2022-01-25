@@ -1,0 +1,35 @@
+.message {
+	position: absolute;
+	top: 15px;
+	 left: 50%;
+ transform: translateX(-50%);
+	padding: .5em;
+	background-color: $blue;
+	border-radius: 12px;
+	color: #fff;
+}
+.overlay {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba($color: #555, $alpha: .5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal {
+	height: 10.7rem;
+	width: 95%;
+	padding: 1rem;
+	background-color: #fff;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.modal__buttons {
+	text-align: right;
+}
+

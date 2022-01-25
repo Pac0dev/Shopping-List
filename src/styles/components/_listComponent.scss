@@ -1,0 +1,23 @@
+.item-category{
+	color: $gray;
+}
+
+.item-list {
+	list-style: none;
+	padding: 0;
+}
+
+.item-list__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1.3rem;
+	margin-bottom: 1rem;
+	background-color: #fff;
+	font-weight: bold;
+	box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+	border-radius: 12px;
+}
+.item-list__add-btn {
+	cursor: pointer;
+}
