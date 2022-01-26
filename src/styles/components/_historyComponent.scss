@@ -6,6 +6,8 @@
 	margin-bottom: 1rem;
 }
 
+.history-detailed__header {margin-bottom: 1rem;}
+
 .history__month {
 	margin-bottom: 1rem;
 }
@@ -35,10 +37,29 @@
 }
 .history__list {
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap:wrap;
 }
 .history__list-item {
 	background-color: #fff;
 	border-radius: 12px;
 	box-shadow: 0 0 5px #ccc;
-	padding: 1rem;
+	padding: .5rem;
+	margin-bottom: 1rem;
+}
+.history__category {
+	text-transform: capitalize;
+}
+
+.button-back {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	color: $orange;
+}
+.date-container {
+	display: flex;
+	align-items: center;
+	img{margin-right: .5rem;}
 }

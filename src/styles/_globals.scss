@@ -39,6 +39,10 @@ html {
 	list-style: none;
 	padding: 0;
 }
+.active {
+	background-color: $orange;
+}
+.product-count{color: $orange}
 .floating-number {
 	position: absolute;
 	top: -.2rem;

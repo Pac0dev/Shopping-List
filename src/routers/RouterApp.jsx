@@ -6,7 +6,7 @@ import PageNotFound from "../pages/PageNotFound";
 import PageStatics from "../pages/PageStatics";
 
 const RouterApp = () => {
-	console.log();
+	//*TODO: make delete item request*/
 	return (
 		<BrowserRouter>
 			<div className="flex">

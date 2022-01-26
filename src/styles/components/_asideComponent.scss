@@ -30,8 +30,9 @@
 }
 .aside__list {
 	padding: 0;
+	height: 16rem;
 	list-style: none;
-	overflow-y: scroll;
+	overflow-y: auto;
 	position: relative;
 	
 }
@@ -42,6 +43,6 @@
 }
 .aside__positioned-text {
 	position: absolute;
-	 left: 50%;
-	  transform: translateX(-50%);
+	left: 50%;
+	transform: translateX(-50%);
 }

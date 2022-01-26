@@ -5,10 +5,12 @@ import ProductRowComponent from "./ProductRowComponent";
 
 const TableProductsComponent = ({ products = [] }) => {
 	const [categories, setCategories] = useState([]);
+	const [activeClass, setActiveClass] = useState('');
 
 	useEffect(() => {
 		setCategories(getSortedCategories(products));
 	}, [products]);
+
 
 	return (
 		<div className="product-table">
@@ -19,6 +21,8 @@ const TableProductsComponent = ({ products = [] }) => {
 						<ProductRowComponent
 							key={product._id}
 							product={product}
+							activeClass={activeClass}
+							setActiveClass={setActiveClass}
 						/>
 					));
 				return (

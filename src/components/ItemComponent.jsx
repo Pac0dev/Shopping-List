@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import add from "../assets/add.svg"
+import addOrange from "../assets/addOrange.svg"
 import trash from "../assets/trash.svg"
 import remove from "../assets/remove.svg";
 import { ShoppingContext } from "../context/ShoppingContextProvider";
@@ -28,6 +28,7 @@ export const ItemComponent = ({ product }) => {
 				name: product.name,
 				desc: product.desc,
 				category: product.category,
+				count: count,
 			}
 			productDispatch({
 				type: productTypes.getMarkedProducts,
@@ -49,9 +50,9 @@ export const ItemComponent = ({ product }) => {
 			<span className={`${isMarked === true ? 'marked' : ''} item__name`}>{name}</span>
 			{isShow ? (
 				<div className="item__controllers">
-					<span className="item__delete" onClick={() => productDispatch({type: productTypes.remove, payload: product._id})}>
+					<div className="item__delete" onClick={() => productDispatch({type: productTypes.remove, payload: product._id})}>
 						<img src={trash} alt="delete icon" />
-					</span>
+					</div>
 					<span className="item__substract" onClick={() => productDispatch({type:productTypes.decrement, payload: product._id }) }>
 						<img src={remove} alt="substract icon" />
 					</span>
@@ -59,7 +60,7 @@ export const ItemComponent = ({ product }) => {
 						{count} pcs
 					</button>
 					<span className="item__add" onClick={() => productDispatch({type:productTypes.increment, payload: product._id }) }>
-						<img src={add} alt="add icon" />
+						<img src={addOrange} alt="add icon" />
 					</span>
 				</div>
 			) : (

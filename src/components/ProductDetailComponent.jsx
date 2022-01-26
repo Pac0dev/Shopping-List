@@ -2,7 +2,9 @@ import {useContext} from "react"
 import {ShoppingContext} from "../context/ShoppingContextProvider"
 import {UiContext} from "../context/UiContextProvider";
 import productTypes from "../types/productTypes";
+
 import back from '../assets/back.svg';
+import noImage from '../assets/noImage.svg';
 const ProductDetailComponent = () => {
 	const {productState, productDispatch} = useContext(ShoppingContext);
 	const {setIsProductDisplay} = useContext(UiContext);
@@ -31,7 +33,8 @@ const ProductDetailComponent = () => {
 					<img src={back} alt="arrow back icon"/>
 					<span>back</span>
 				</div>
-				<div className="img-container">
+				<div className="aside-product__img-container">
+					{(product.img) ? <img src={product.img} alt="imagen"/> : <img className="aside-product__img" src={noImage} alt="no avaible image"/>}
 				</div>
 			</header>
 			<div className="aside-product__info">

@@ -3,7 +3,7 @@ import add from '../assets/add.svg';
 import {ShoppingContext} from '../context/ShoppingContextProvider';
 import {UiContext} from '../context/UiContextProvider';
 import productTypes from '../types/productTypes';
-const ProductRowComponent = ({product={}}) => {
+const ProductRowComponent = ({product={}, activeClass, setActiveClass}) => {
 
 	const {productDispatch} = useContext(ShoppingContext);
 	const {setIsProductDisplay, setIsShowMenu} = useContext(UiContext);
@@ -15,6 +15,8 @@ const ProductRowComponent = ({product={}}) => {
 			type: productTypes.select,
 			payload: product,
 		});
+
+		setActiveClass(product._id);
 	};
 
 	const handleDisplayProductDetail = () => {
@@ -29,7 +31,7 @@ const ProductRowComponent = ({product={}}) => {
 	return(
 		<div className="product" >
 			<span className="product__name" onClick={handleDisplayProductDetail}>{name}</span>
-			<img className="product__add-icon" src={add} alt="add-icon" onClick={handleAddProduct}/>
+			<img className={`${activeClass === product._id ? 'active' : ''} product__add-icon`} src={add} alt="add-icon" onClick={handleAddProduct}/>
 		</div>
 	)
 }

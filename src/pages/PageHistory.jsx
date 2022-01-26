@@ -25,14 +25,16 @@ const PageHistory = () => {
 
 	return (
 		<div className="history flex-right">
-			<header>
-				<h3>Shopping history</h3>
-			</header>
+			{isHistoryDisplayed === false && (
+				<header>
+					<h3>Shopping history</h3>
+				</header>
+			)}
 
 			{isHistoryDisplayed === true ? (<HistoryDetailComponent/>) : (<HistoryTableComponent sortedMonths={sortedMonths} purchases={purchases}/>)}
 			{isShowMenu === true && <AsideComponent/>}
 		</div>
-	)
+	);
 }
 
 export default PageHistory

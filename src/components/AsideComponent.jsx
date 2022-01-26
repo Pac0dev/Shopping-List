@@ -46,7 +46,7 @@ const AsideComponent = () => {
 										));
 									return (
 										<li key={cat}>
-											<span className="text-muted">{cat}</span> {products}
+											<span className="text-muted category">{cat}</span> {products}
 										</li>
 									);
 								})}

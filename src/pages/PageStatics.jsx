@@ -3,7 +3,7 @@ import React from 'react'
 const PageStatics = () => {
 	return (
 		<div>
-			statics	
+			Cooming Soon	
 		</div>
 	)
 }

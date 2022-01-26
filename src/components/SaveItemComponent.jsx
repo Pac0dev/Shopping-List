@@ -20,7 +20,7 @@ const SaveItemComponent = ({isSaveButtonEnabledl}) => {
 		if (name.trim().length > 3) {
 			setIsCheckedEnabled(true);
 		} else {
-			console.log("the name lenght is too short");
+			console.log("the name's lenght is too short");
 		}
 	};
 

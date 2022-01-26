@@ -76,6 +76,7 @@ const AddItemComponent = ({setIsAddingItem}) => {
 						placeholder="Enter a name"
 						type="text"
 						name="name"
+						autoComplete="off"
 						value={name}
 						onChange={handleInputChange}
 					/>
@@ -86,6 +87,7 @@ const AddItemComponent = ({setIsAddingItem}) => {
 						className="add-item__form-textarea"
 						placeholder="Enter a note"
 						name="note"
+						autoComplete="off"
 						value={note}
 						onChange={handleInputChange}
 					></textarea>
@@ -98,6 +100,7 @@ const AddItemComponent = ({setIsAddingItem}) => {
 						type="text"
 						name="image"
 						value={image}
+						autoComplete="off"
 						onChange={handleInputChange}
 					/>
 				</div>
@@ -108,6 +111,7 @@ const AddItemComponent = ({setIsAddingItem}) => {
 						placeholder="Enter a category"
 						type="text"
 						name="category"
+						autoComplete="off"
 						value={category}
 						onChange={handleInputChange}
 					/>

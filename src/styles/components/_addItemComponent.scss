@@ -19,6 +19,9 @@
 	border-radius: 12px;
 	border: 2px solid $gray;
 	padding: 1.2rem .5rem;
+	&:focus{
+		border: 2px solid $orange;
+	}
 }
 .add-item__form-textarea{
 	height: 6.9rem;
@@ -40,4 +43,7 @@
 	&:hover{
 		background-color: rgba($color: $gray, $alpha: .2);
 	}
+}
+.bg-font {
+	font-size: 1.625rem;
 }
