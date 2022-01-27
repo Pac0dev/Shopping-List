@@ -27,7 +27,26 @@ const postFetch = ( endpoint = '', body = {} ) => {
 	})
 }
 
+const deleteFetch = ( endpoint = '', body = {} ) => {
+
+	const obj = {
+		method: 'DELETE',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(body),
+	}
+
+	return new Promise((resolve, reject) => {
+		fetch( URL + endpoint, obj ).then((response) => response.json()).then((data) => {
+			resolve(data);
+		})
+		.catch((err) => reject(err));
+	})
+};
+
 export {
 	getFetch,
 	postFetch,
+	deleteFetch,
 }

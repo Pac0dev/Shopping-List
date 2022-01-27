@@ -25,14 +25,15 @@ const PageHistory = () => {
 
 	return (
 		<div className="history flex-right">
-			{isHistoryDisplayed === false && (
-				<header>
-					<h3>Shopping history</h3>
-				</header>
-			)}
-
-			{isHistoryDisplayed === true ? (<HistoryDetailComponent/>) : (<HistoryTableComponent sortedMonths={sortedMonths} purchases={purchases}/>)}
-			{isShowMenu === true && <AsideComponent/>}
+			<div className="history-container">
+				{isHistoryDisplayed === false && (
+					<header>
+						<h3>Shopping history</h3>
+					</header>
+				)}
+				{(isShowMenu && window.innerWidth < 768) && <AsideComponent media="mobile"/>}
+				{isHistoryDisplayed === true ? (<HistoryDetailComponent/>) : (<HistoryTableComponent sortedMonths={sortedMonths} purchases={purchases}/>)}
+			</div>
 		</div>
 	);
 }

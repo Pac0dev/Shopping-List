@@ -31,7 +31,9 @@ const ProductRowComponent = ({product={}, activeClass, setActiveClass}) => {
 	return(
 		<div className="product" >
 			<span className="product__name" onClick={handleDisplayProductDetail}>{name}</span>
-			<img className={`${activeClass === product._id ? 'active' : ''} product__add-icon`} src={add} alt="add-icon" onClick={handleAddProduct}/>
+			<div className={`${activeClass === product._id ? 'active' : ''} product__add-icon`} onClick={handleAddProduct}>
+				<img src={add} alt="add-icon"/>
+			</div>
 		</div>
 	)
 }

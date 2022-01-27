@@ -5,7 +5,8 @@ import productTypes from "../types/productTypes";
 
 import back from '../assets/back.svg';
 import noImage from '../assets/noImage.svg';
-const ProductDetailComponent = () => {
+import {deleteFetch, postFetch} from "../helpers/fetchUtility";
+const ProductDetailComponent = ({media}) => {
 	const {productState, productDispatch} = useContext(ShoppingContext);
 	const {setIsProductDisplay} = useContext(UiContext);
 	
@@ -26,8 +27,25 @@ const ProductDetailComponent = () => {
 		});
 	};
 
+	const handleClickDelete = () => {
+		const body = {
+			id: product._id,
+		};
+
+		deleteFetch('/products/delete-product', body).then((data) => {
+			productDispatch({
+				type: productTypes.removeProductId,
+				payload: product._id
+			});
+			setIsProductDisplay(false);
+			console.log(data);
+		})
+		.catch((err) => console.warn(err));
+
+	}
+
 	return (
-		<aside className="aside-product">
+		<aside className="aside-product desktop">
 			<header className="aside-product__header">
 				<div className="aside-product__back" onClick={handleBack}>
 					<img src={back} alt="arrow back icon"/>
@@ -52,7 +70,7 @@ const ProductDetailComponent = () => {
 				</div>
 			</div>
 			<div className="aside-product__buttons">
-				<button className="btn">Delete</button>
+				<button className="btn" onClick={handleClickDelete}>Delete</button>
 				<button className="btn btn-orange" onClick={handleAddProduct}>Add to list</button>
 			</div>
 		</aside>

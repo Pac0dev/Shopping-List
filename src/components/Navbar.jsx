@@ -7,10 +7,11 @@ import cart from "../assets/cart.svg";
 import { NavLink } from "react-router-dom";
 import {UiContext} from "../context/UiContextProvider";
 import {ShoppingContext} from "../context/ShoppingContextProvider";
+import productTypes from "../types/productTypes";
 const Navbar = () => {
 
 	const {setIsShowMenu, setIsCheckedEnabled, isCheckEnabled, isProductDisplay} = useContext(UiContext);
-	const {productState} = useContext(ShoppingContext);
+	const {productDispatch, productState} = useContext(ShoppingContext);
 
 	const {selectedProducts} = productState;
 
@@ -23,7 +24,12 @@ const Navbar = () => {
 	}
 
 	const handleClickShowShoppingList = () => {
-		if(isProductDisplay === false) setIsShowMenu(prev => !prev);
+		if(isProductDisplay === false){
+			setIsShowMenu(prev => !prev);
+		} 
+		productDispatch({
+			type: productTypes.removeMarkedProducts,
+		})
 	};
 
 	return (

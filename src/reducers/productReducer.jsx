@@ -4,11 +4,22 @@ import {
 	incrementCount,
 	deleteProduct,
 } from "../helpers/shoppingHandler";
+
 import productTypes from "../types/productTypes";
 import purchasesType from "../types/purchasesType";
 
 const productReducer = (initialState, action) => {
 	switch (action.type) {
+		case productTypes.getProducts: 
+			return {
+				...initialState,
+				products: action.payload,
+			}
+		case productTypes.removeProductId: 
+			return {
+				...initialState,
+				products: initialState.products.filter(product => product._id !== action.payload),
+			}
 		case productTypes.select:
 			return {
 				...initialState,
@@ -58,11 +69,23 @@ const productReducer = (initialState, action) => {
 					(product) => product.id !== action.payload
 				),
 			};
+		case productTypes.removeMarkedProducts: 
+			return {
+				...initialState,
+				markedProducts: [],
+			}
 		case productTypes.reset:
 			return {
+				...initialState,
 				selectedProducts: [],
 				markedProducts: [],
 			}
+		case productTypes.markedProducts: {
+			return {
+				...initialState,
+				markedProducts: [],
+			}
+		}
 		case productTypes.selectSingleProduct: {
 			return {
 				...initialState, 

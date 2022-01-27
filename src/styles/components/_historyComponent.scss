@@ -1,6 +1,7 @@
 .history {
-	padding: 1rem;
 	position: relative;
+	padding-right: .5rem;
+	padding-left: .5rem;
 }
 .history__header {
 	margin-bottom: 1rem;
@@ -15,25 +16,26 @@
 .history-item {
 	margin-bottom: 1rem;
 	padding-top: 1rem;
+	padding-left: .3rem;
 	padding-bottom: 1rem;
 	display: flex;
-	flex-direction: column;
 	background-color: #fff;
 	border-radius: 12px;
 	box-shadow: 0 0 4px #ccc;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	min-width: 10rem;
 	span {margin-bottom: .7rem;}
 }
 .history-item__date {
 	font-size: .75rem;
 }
 .history-item__status {
+	padding: .5rem .2rem;
 	border: 2px solid $blue;
 	border-radius: 12px;
 	font-size: .75rem;
-	padding: .5rem;
 }
 .history__list {
 	display: flex;
@@ -47,6 +49,21 @@
 	box-shadow: 0 0 5px #ccc;
 	padding: .5rem;
 	margin-bottom: 1rem;
+}
+.history-item__name{
+	margin: 0;
+}
+.history-item__right {
+	display: flex;
+	align-items: center;;
+}
+.history-item__date{
+	margin-right: 1rem;
+	margin-bottom: 0;
+}
+.history-item__status{
+	margin-right: 1rem;
+	margin-bottom: 0;
 }
 .history__category {
 	text-transform: capitalize;
@@ -62,4 +79,35 @@
 	display: flex;
 	align-items: center;
 	img{margin-right: .5rem;}
+}
+.history-detailed__list {
+	display:flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.history__list-item {
+	margin: .5rem;
+	flex: 1 1 auto;
+	max-width: 11.375rem;
+	min-width: 10.375rem;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+	.history-container{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.history-content {
+		.history-item {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0;
+			height: 3.93rem;
+			padding: .5rem 1rem;
+		}
+	}
 }

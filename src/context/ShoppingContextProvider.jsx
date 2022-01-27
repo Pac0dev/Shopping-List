@@ -11,6 +11,7 @@ const ShoppingContextProvider = ({ children }) => {
 		selectedProducts: [],
 		markedProducts: [],
 		historyProducts: [],
+		products: [],
 	});
 
 	const savePurchase = (name = '', products) => {

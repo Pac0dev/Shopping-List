@@ -1,13 +1,14 @@
 .products {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
 	.product {
 		display: flex;
-		flex-grow: 1;
-		flex-wrap: wrap;
-		margin-right: .3rem;
+		flex: 1 1 auto;
+		min-width: 7.75rem;
+		max-width: 8.8rem;
+		min-height: 50px;
+		margin: .5rem;
 		justify-content: space-between;
 		align-items: center;
 		background-color: #ffffff;
@@ -21,7 +22,16 @@
 	}
 	.product__add-icon {
 		height: 100%;
+		display:flex;
+		align-items: center;
+		justify-content: center;
 	}
+}
+.products__category-name{
+	padding-left: 1rem;
+	font-weight: normal;
+	color: #000;
+	text-transform: capitalize;
 }
 .category {
 	display:inline-block;

@@ -6,7 +6,7 @@ import { ItemComponent } from "./ItemComponent";
 import SaveItemComponent from "./SaveItemComponent";
 import AddItemComponent from "./AddItemComponent";
 import {getSortedCategories} from "../helpers/filterProducts";
-const AsideComponent = () => {
+const AsideComponent = ({media}) => {
 	const { productState } = useContext(ShoppingContext);
 
 	const { selectedProducts } = productState;
@@ -21,7 +21,7 @@ const AsideComponent = () => {
 	}, [selectedProducts]);
 
 	return (
-		<aside className="aside">
+		<aside className={`aside ${media}`}>
 			<header className="aside__header">
 				<img src={wine} alt="wine" />
 				<div className="aside__text">

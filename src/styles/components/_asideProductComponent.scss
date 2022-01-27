@@ -9,6 +9,12 @@
 	padding: 1rem 2rem;
 	
 }
+.aside-product.desktop {
+	position: relative;
+	flex-basis: 35%;
+	max-width: 24.31rem;
+	min-width: 23rem;
+}
 .aside-product__back{
 	display: flex;
 	align-items: center;
